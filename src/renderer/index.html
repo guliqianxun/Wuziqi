@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wuziqi Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h1>五子棋</h1>
@@ -12,7 +12,18 @@
     <div class="space-y-4">
         <button class="deck-button">人人对战</button>
         <button class="deck-button">人机对战</button>
+        <button class="deck-button" id="startGame">直接开始</button>
         <button class="deck-button">退出游戏</button>
     </div>
+    <script>
+        // 选中ID为startGame的按钮
+        const startGameButton = document.getElementById('startGame');
+
+        // 为按钮添加点击事件监听器
+        startGameButton.addEventListener('click', function() {
+            // 当按钮被点击时，跳转到boarding.html
+            window.location.href = 'boarding.html';
+        });
+    </script>
 </body>
 </html>

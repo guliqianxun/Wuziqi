@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Wuziqi Game Board</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="player-indicators">
         <div class="player-indicator player1">
-            <img src="path_to_player1_icon.png" alt="Player 1 Icon" class="player-icon">
+            <img src="../../assets/charactor/character1.png" alt="Player 1 Icon" class="player-icon">
             <span class="nickname">Player 1</span>
         </div>
-        <div class="player-indicator player2">
-            <img src="path_to_player2_icon.png" alt="Player 2 Icon" class="player-icon">
-            <span class="nickname">Player 2</span>
-        </div>
+    </div>
+    <div class="board-container">
+        <canvas id="chessBoard" width="544" height="544"></canvas>
     </div>
     
-    <div class="board-container">
+    
+    <!-- <div class="board-container">
         <div class="board" id="board"></div>
+    </div> -->
+    <div class="player-indicators">
+        <div class="player-indicator player2">
+            <img src="../../assets/charactor/character2.png" alt="Player 2 Icon" class="player-icon">
+            <span class="nickname">Player 2</span>
+        </div>
     </div>
 
     <div class="game-controls">
         <button class="deck-button">悔棋</button>
         <button class="deck-button">提交</button>
     </div>
+    <script type="module" src="../scripts/index.js"></script>
+    
 </body>
 </html>

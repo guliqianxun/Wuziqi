@@ -92,8 +92,8 @@ h1 {
 }
 
 .board-container {
-    width: 520px;
-    height: 520px;
+    width: 544px;
+    height: 544px;
     background-color: #ADD8E6; /* 淡蓝色背景 */
     position: relative;
     margin: 0 auto;
@@ -114,23 +114,6 @@ h1 {
     background-size: 32px 32px;
     pointer-events: none;
 }
-
-/* .board::after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 480px;
-    height: 480px;
-    border: 1px solid #000;
-    box-shadow: 0 0 0 1px #000;
-    background-image: 
-      linear-gradient(to right, #000 1px, transparent 1px),
-      linear-gradient(to bottom, #000 1px, transparent 1px);
-    background-size: 32px 32px;
-    pointer-events: none;
-} */
-
 
 
 .game-controls {
