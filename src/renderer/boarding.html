@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wuziqi Game Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-indicators">
+        <div class="player-indicator player1">
+            <img src="path_to_player1_icon.png" alt="Player 1 Icon" class="player-icon">
+            <span class="nickname">Player 1</span>
+        </div>
+        <div class="player-indicator player2">
+            <img src="path_to_player2_icon.png" alt="Player 2 Icon" class="player-icon">
+            <span class="nickname">Player 2</span>
+        </div>
+    </div>
+    
+    <div class="board" id="board"></div>
+
+    <script>
+        const board = document.getElementById('board');
+        const rows = 15;
+        const cols = 15;
+
+        for (let row = 1; row <= rows; row++) {
+            for (let col = 1; col <= cols; col++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                cell.dataset.row = row;
+                cell.dataset.col = col;
+                
+                // // Adjusting for corner cells
+                // if (row === 1 || row === rows) cell.classList.add('half-row');
+                // if (col === 1 || col === cols) cell.classList.add('half-col');
+
+                board.appendChild(cell);
+            }
+        }
+    </script>
+
+    <div class="game-controls">
+        <button class="deck-button">悔棋</button>
+        <button class="deck-button">提交</button>
+    </div>
+</body>
+</html>

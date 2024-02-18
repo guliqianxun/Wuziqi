@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuziqi Game Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function togglePiece() {
+            // Get the current color of Player 1's piece
+            const currentColor = document.querySelector('.player1-piece').style.backgroundColor;
+
+            // Toggle the piece color between white and black
+            const newColor = currentColor === 'white' ? 'black' : 'white';
+
+            // Set the new colors
+            document.querySelector('.player1-piece').style.backgroundColor = newColor;
+            document.querySelector('.player2-piece').style.backgroundColor = currentColor; // Opposite color
+        }
+        function startGame() {
+            // Logic to start the game
+        }
+
+        function returnToMain() {
+            // Logic to return to the main menu
+        }
+    </script>
+</head>
+<body>
+    <h2>游戏设置</h2>
+    <div class="settings-container">
+        <!-- Player 1 Settings -->
+        <div class="player-settings rectangle">
+            <h3>玩家1 设置</h3>
+            <select id="player1-type">
+                <option value="human">人类</option>
+            </select>
+
+            <!-- <p>类型: <span>人类</span> / <span>AI</span></p> -->
+            <p>棋子: <span class="piece player1-piece" onclick="togglePiece()"></span></p>
+        </div>
+
+        <!-- Player 2 Settings -->
+        <div class="player-settings rectangle">
+            <h3>玩家2 设置</h3>
+            <select id="player1-type">
+                <option value="human">人类</option>
+                <option value="ai">AI</option>
+            </select>
+            <p>棋子: <span class="piece player2-piece" onclick="togglePiece()"></span></p>
+        </div>
+    </div>
+
+    <!-- Game Control Buttons -->
+    <div class="game-controls">
+        <button class="deck-button" onclick="startGame()">开始游戏</button>
+        <button class="deck-button" onclick="returnToMain()">返回主菜单</button>
+    </div>
+</body>
+</html>
