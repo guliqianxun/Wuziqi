@@ -79,6 +79,12 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    border: 2px solid transparent; /* 默认不显示边框 */
+    transition: border-color 0.3s; /* 平滑过渡效果 */
+}
+
+.player-indicator.active {
+    border-color: green; /* 当玩家活跃时显示绿色边框 */
 }
 
 .player-icon {
